@@ -1,0 +1,111 @@
+@charset "UTF-8";
+* {
+  font-family: "Roboto", sans-serif, 微軟正黑體;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #555;
+}
+
+.box {
+  width: 100%;
+}
+.box #app {
+  background-color: #fff;
+}
+.box #app .selectbox {
+  background-color: #28C4D8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+.box #app .selectbox select {
+  width: 500px;
+}
+.box #app h3 {
+  color: #555;
+}
+.box #app .focusbox {
+  padding: 20px;
+  background-color: #eee;
+}
+.box #app .allCounty {
+  padding: 20px;
+}
+.box #app .card {
+  background-color: #fff;
+  color: #222;
+}
+.box #app .card .card-header {
+  letter-spacing: 1px;
+  background-color: #06D6A0;
+}
+.box #app .card .header-status-aqi2 {
+  background-color: #FFD166;
+}
+.box #app .card .header-status-aqi3 {
+  background-color: #FE621D;
+}
+.box #app .card .header-status-aqi4 {
+  background-color: #EF476F;
+}
+.box #app .card .header-status-aqi5 {
+  background-color: #AF3B64;
+}
+.box #app .card .header-status-aqi6 {
+  background-color: #490A0A;
+}
+.box #app .card .card-body {
+  background-color: #ABEBC6;
+}
+.box #app .card .card-body ul li {
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+.box #app .card .body-status-aqi2 {
+  background-color: #FAE4AF;
+}
+.box #app .card .body-status-aqi3 {
+  background-color: #FCBCA1;
+}
+.box #app .card .body-status-aqi4 {
+  background-color: #F5B7B1;
+}
+.box #app .card .body-status-aqi5 {
+  background-color: #D799AF;
+}
+.box #app .card .body-status-aqi6 {
+  background-color: #8E6F6F;
+}
+.box #app .card .card-footer {
+  letter-spacing: 1px;
+  background-color: #06D6A0;
+}
+.box #app .card .header-status-aqi2 {
+  background-color: #FFD166;
+}
+.box #app .card .header-status-aqi3 {
+  background-color: #FE621D;
+}
+.box #app .card .header-status-aqi4 {
+  background-color: #EF476F;
+}
+.box #app .card .header-status-aqi5 {
+  background-color: #AF3B64;
+}
+.box #app .card .header-status-aqi6 {
+  background-color: #490A0A;
+}

@@ -1,0 +1,59 @@
+<div class="box">
+  <div id="app">
+    <div class="selectbox">
+      <h2>台灣空氣品質監測站數據</h2>
+      <select class="form-control mb-3" name="" id="" v-model="filter">
+        <option value="">--- 請選擇城市 ---</option>
+        <option value="all">所有城市</option>
+        <option v-for="county in location">{{county}}</option>
+      </select>
+    </div>
+    
+  <!-- 關注城市   -->
+    <div class="focusbox">
+      <h3>關注城市</h3>
+      <div class="card-columns">
+        <cards v-for="(item,key) in stared" 
+             :cards-data="item" :key="key"  @change="remove(item)" >
+          <template slot="icon">
+            <i class="fas fa-star"></i>
+          </template>
+        </cards>
+      </div>
+    </div>
+
+   
+    <div class="allCounty">
+      <h3>其餘城市</h3>
+      <div class="card-columns">   
+      <cards v-for="(item,key) in filterCounty" 
+             :cards-data="item" :key="key"  @change="add(item)" ></cards>    
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- 其他城市script -->
+<script type="text/x-template" id="cardsTemplate">
+  <div class="card mb-3"  >
+    <div class="card-header" :class="cardHeaderColor">{{cardsData.County}} - {{cardsData.SiteName}}
+      <a class="float-right" href="#" @click.prevent="outadd(cardsData)">
+      <slot name="icon">
+         <i class="far fa-star"></i>
+      </slot>
+       </a> 
+    </div>
+    <div class="card-body" :class="cardBodyColor">
+      <ul class="list-unstyled">
+        <li>AQI 指數: {{cardsData.AQI}}</li>
+        <li>PM2.5: {{cardsData['PM2.5']}}</li>
+        <li>說明: {{cardsData.Status}}</li>
+      </ul>
+    </div> 
+    <div class="card-footer" :class="cardHeaderColor">
+      {{cardsData.PublishTime}}
+    </div>
+  </div>
+    
+</script>

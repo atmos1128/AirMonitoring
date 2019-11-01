@@ -1,0 +1,144 @@
+$header1: #06D6A0
+$header2: #FFD166
+$header3: #FE621D
+$header4: #EF476F
+$header5: #AF3B64
+$header6: #490A0A
+$body1:  #ABEBC6 
+$body2: #FAE4AF
+$body3: #FCBCA1
+$body4: #F5B7B1
+$body5: #D799AF
+$body6: #8E6F6F
+
+@mixin size($w,$h:$w)
+  width: $w
+  height: $h
+
+@mixin flexcenter
+  display: flex
+  justify-content: center
+  align-items: center
+
+  
+@mixin breakpoint($point)
+  @if $point == pc1240
+    @media  screen and (max-width: 1240px)
+      @content 
+  @if $point == pc1024
+    @media  screen and (max-width: 1024px)
+      @content 
+  @else if $point == pad980
+    @media  screen and (max-width: 980px)  
+      @content
+  @else if $point == pad767
+    @media screen and (max-width: 767px)
+      @content
+  @else if $point == pad600
+    @media screen and (max-width: 600px)
+      @content
+  @else if $point == mobile480
+    @media  screen and (max-width: 480px)
+      @content
+  @else if $point == mobile414
+    @media  screen and (max-width: 414px)
+      @content
+  @else if $point == mobile375
+    @media  screen and (max-width: 375px)
+      @content
+  @else if $point == mobile360
+    @media  screen and (max-width: 360px)
+      @content
+  @else if $point == mobile320 
+    @media  screen and (max-width: 320px)
+      @content
+*
+  font-family: 'Roboto', sans-serif,微軟正黑體
+  font-weight: bold
+  text-transform: uppercase
+  // border: 1px solid #000
+  box-sizing: border-box
+
+[v-cloak]
+  display: none
+
+
+
+
+html,body
+  margin: 0
+  padding: 0
+  width: 100%
+  height: 100%
+  background-color: #555
+.box
+  width: 100%
+  #app
+    background-color: #fff
+    .selectbox
+      background-color: #28C4D8
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      padding: 30px
+      select
+        width: 500px
+        
+    h3
+      color: #555
+
+    .focusbox
+      padding: 20px
+      background-color: #eee
+    .allCounty
+      padding: 20px
+    .card
+      background-color: #fff
+      color: #222
+      .card-header
+        letter-spacing: 1px
+        background-color: $header1
+      .header-status-aqi2 
+        background-color: $header2
+      .header-status-aqi3 
+        background-color: $header3
+      .header-status-aqi4 
+        background-color: $header4
+      .header-status-aqi5 
+        background-color: $header5
+      .header-status-aqi6 
+        background-color: $header6
+        
+      .card-body
+        background-color: $body1
+        ul
+          li
+            margin-bottom: 5px
+            letter-spacing: 1px
+      .body-status-aqi2
+        background-color: $body2
+      .body-status-aqi3
+        background-color: $body3
+      .body-status-aqi4
+        background-color: $body4
+      .body-status-aqi5
+        background-color: $body5
+      .body-status-aqi6
+        background-color: $body6
+        
+      .card-footer  
+        letter-spacing: 1px
+        background-color: $header1
+      .header-status-aqi2 
+        background-color: $header2
+      .header-status-aqi3 
+        background-color: $header3
+      .header-status-aqi4 
+        background-color: $header4
+      .header-status-aqi5 
+        background-color: $header5
+      .header-status-aqi6 
+        background-color: $header6
+        
+      
